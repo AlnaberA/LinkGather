@@ -16,3 +16,4 @@ class GoogleSpider(scrapy.Spider):
 
     def parse(self, response, **kwargs):
         write_array_to_file(str(response.css("a::attr(href)").getall()))
+        next_page = ''
