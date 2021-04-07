@@ -2,7 +2,6 @@ Cmds:
 echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄  scrapy startproject project_name
 echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄  scrapy shell www.website.com
 ------------------------------------------------------------------------------------------
-https://stackoverflow.com/questions/21788939/how-to-use-pycharm-to-debug-scrapy-projects
+https://blog.softhints.com/run-debug-scrapy-projects-pycharm/
 Old Script Path: /Users/echo/PycharmProjects/LinkGathering/link_gather/link_gather/spiders/google_spider.py
-
 ------------------------------------------------------------------------------------------
