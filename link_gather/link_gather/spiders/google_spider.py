@@ -7,6 +7,11 @@ def write_array_to_file(data):
             txt_file.write(line)
 
 
+def convert_file_to_array():
+    file = open("output.txt", "r")
+    clean_string = file.read().strip('[').strip(']')
+    return clean_string.split(',')
+
 
 class GoogleSpider(scrapy.Spider):
     name = "googleSpider"
@@ -17,4 +22,5 @@ class GoogleSpider(scrapy.Spider):
 
     def parse(self, response, **kwargs):
         write_array_to_file(str(response.css("a::attr(href)").getall()))
+        test = convert_file_to_array()
         next_page = ''
