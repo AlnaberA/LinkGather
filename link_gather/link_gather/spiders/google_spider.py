@@ -7,6 +7,7 @@ def write_array_to_file(data):
             txt_file.write(line)
 
 
+
 class GoogleSpider(scrapy.Spider):
     name = "googleSpider"
 

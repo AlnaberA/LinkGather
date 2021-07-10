@@ -1,6 +1,10 @@
 Cmds:
 echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄  scrapy startproject project_name
+
 echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄  scrapy shell www.website.com
+
+echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄 $ scrapy crawl googleSpider
+
 ------------------------------------------------------------------------------------------
 https://blog.softhints.com/run-debug-scrapy-projects-pycharm/
 Old Script Path: /Users/echo/PycharmProjects/LinkGathering/link_gather/link_gather/spiders/google_spider.py
