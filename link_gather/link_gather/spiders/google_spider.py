@@ -1,5 +1,5 @@
 import scrapy
-
+import validators
 
 def write_array_to_file(data):
     with open("output.txt", "w") as txt_file:
