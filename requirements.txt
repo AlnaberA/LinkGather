@@ -28,3 +28,5 @@ soupsieve==2.1
 Twisted==20.3.0
 w3lib==1.22.0
 zope.interface==5.2.0
+
+validators~=0.18.2
