@@ -1,68 +1,51 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: win-64
-atomicwrites=1.4.0=py_0
-attrs=20.3.0=pyhd3eb1b0_0
-automat=20.2.0=py_0
-bcrypt=3.2.0=py37he774522_0
-beautifulsoup4=4.9.3=pyha847dfd_0
-ca-certificates=2020.12.5=h5b45459_0
-certifi=2020.12.5=py37h03978a9_1
-cffi=1.14.5=py37hcd4344a_0
-colorama=0.4.4=pyhd3eb1b0_0
-constantly=15.1.0=py37h28b3542_0
-cryptography=3.4.7=py37h71e12ea_0
-cssselect=1.1.0=py_0
-hyperlink=21.0.0=pyhd3eb1b0_0
-idna=3.1=pyhd3eb1b0_0
-importlib-metadata=3.7.3=py37haa95532_1
-importlib_metadata=3.7.3=hd3eb1b0_1
-incremental=17.5.0=py37haa95532_0
-iniconfig=1.1.1=pyhd3eb1b0_0
-itemadapter=0.2.0=pyhd3eb1b0_0
-itemloaders=1.0.4=pyhd3eb1b0_0
-jmespath=0.10.0=py_0
-libiconv=1.15=h1df5818_7
-libxml2=2.9.10=hb89e7f3_3
-libxslt=1.1.34=he774522_0
-lxml=4.6.3=py37h9b66d53_0
-more-itertools=8.7.0=pyhd3eb1b0_0
-openssl=1.1.1k=h8ffe710_0
-packaging=20.9=pyhd3eb1b0_0
-parsel=1.5.2=py37haa95532_0
-pip=21.0.1=py37haa95532_0
-pluggy=0.13.1=py37haa95532_0
-protego=0.1.16=py_0
-py=1.10.0=pyhd3eb1b0_0
-pyasn1=0.4.8=py_0
-pyasn1-modules=0.2.8=py_0
-pycparser=2.20=py_2
-pydispatcher=2.0.5=py37haa95532_1
-pyhamcrest=2.0.2=pyhd3eb1b0_2
-pyopenssl=20.0.1=pyhd3eb1b0_1
-pyparsing=2.4.7=pyhd3eb1b0_0
-pytest=6.2.3=py37haa95532_2
-pytest-runner=5.3.0=pyhd3eb1b0_0
-python=3.7.10=h6244533_0
-python_abi=3.7=1_cp37m
-pywin32=227=py37he774522_1
-queuelib=1.5.0=py37haa95532_0
-scrapy=2.4.1=py37h03978a9_2
-service_identity=18.1.0=py37h28b3542_0
-setuptools=52.0.0=py37haa95532_0
-six=1.15.0=py37haa95532_0
-soupsieve=2.2.1=pyhd3eb1b0_0
-sqlite=3.35.4=h2bbff1b_0
-toml=0.10.2=pyhd3eb1b0_0
-twisted=21.2.0=py37h2bbff1b_0
-twisted-iocpsupport=1.0.1=py37h2bbff1b_0
-typing_extensions=3.7.4.3=pyha847dfd_0
-vc=14.2=h21ff451_1
-vs2015_runtime=14.27.29016=h5e58377_2
-w3lib=1.21.0=py_0
-wheel=0.36.2=pyhd3eb1b0_0
-wincertstore=0.2=py37_0
-zipp=3.4.1=pyhd3eb1b0_0
-zlib=1.2.11=h62dcd97_4
-zope=1.0=py37_1
-zope.interface=5.3.0=py37h2bbff1b_0
+atomicwrites==1.4.0
+attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
+Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
+bcrypt @ file:///C:/ci/bcrypt_1597918112552/work
+beautifulsoup4 @ file:///home/linux1/recipes/ci/beautifulsoup4_1610988766420/work
+certifi==2021.5.30
+cffi @ file:///C:/ci/cffi_1606255207413/work
+colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+constantly==15.1.0
+cryptography @ file:///C:/ci/cryptography_1613401470461/work
+cssselect==1.1.0
+decorator @ file:///tmp/build/80754af9/decorator_1621259047763/work
+hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
+idna @ file:///tmp/build/80754af9/idna_1609784788857/work
+importlib-metadata @ file:///C:/ci/importlib-metadata_1615900693889/work
+incremental==17.5.0
+iniconfig @ file:///home/linux1/recipes/ci/iniconfig_1610983019677/work
+itemadapter @ file:///tmp/build/80754af9/itemadapter_1605069490748/work
+itemloaders @ file:///tmp/build/80754af9/itemloaders_1606148664897/work
+jmespath @ file:///tmp/build/80754af9/jmespath_1594304593830/work
+lxml @ file:///C:/ci/lxml_1616443391272/work
+more-itertools @ file:///tmp/build/80754af9/more-itertools_1613676688952/work
+packaging @ file:///tmp/build/80754af9/packaging_1611952188834/work
+parsel @ file:///home/conda/feedstock_root/build_artifacts/parsel_1591122878042/work
+pluggy @ file:///C:/ci/pluggy_1615976530170/work
+Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
+py @ file:///tmp/build/80754af9/py_1607971587848/work
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+PyDispatcher==2.0.5
+PyHamcrest @ file:///tmp/build/80754af9/pyhamcrest_1615748656804/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+pytest==6.2.3
+pytest-runner @ file:///tmp/build/80754af9/pytest-runner_1613936096563/work
+pywin32==227
+queuelib==1.5.0
+Scrapy @ file:///D:/bld/scrapy_1614168424315/work
+service-identity==18.1.0
+six @ file:///C:/ci/six_1605205426665/work
+soupsieve @ file:///tmp/build/80754af9/soupsieve_1607965878077/work
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+Twisted @ file:///C:/ci/twisted_1614066451648/work
+twisted-iocpsupport @ file:///C:/ci/twisted-iocpsupport_1614804836190/work
+typing-extensions @ file:///home/ktietz/src/ci_mi/typing_extensions_1612808209620/work
+validators @ file:///tmp/build/80754af9/validators_1612286467315/work
+w3lib @ file:///home/conda/feedstock_root/build_artifacts/w3lib_1591173357158/work
+wincertstore==0.2
+zipp @ file:///tmp/build/80754af9/zipp_1615904174917/work
+zope.interface @ file:///C:/ci/zope.interface_1606922318101/work
