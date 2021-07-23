@@ -9,6 +9,15 @@ def write_to_crawled(data):
         txt_file.write(data + '\n')
 
 
+def is_crawled(data):
+    with open('crawled.txt') as f:
+        datafile = f.readlines()
+    for line in datafile:
+        if data in line:
+            return True
+    return False
+
+
 def write_array_to_file(data):
     with open("output.txt", "w") as txt_file:
         for line in data:
@@ -33,17 +42,20 @@ class GoogleSpider(scrapy.Spider):
     crawled = []
 
     def parse(self, response, **kwargs):
-        next_page = ''
         links = response.css("a::attr(href)").getall()
         for link in links:
             if validators.url(link):
                 self.queue.append(link)
 
-        # Alaa - There is a bug here, L#44 element is being removed before the page is crawled.
-        for element in self.queue:
-            self.queue.remove(element)
-            if element not in self.crawled:
-                self.crawled.append(element)
-                # write_to_crawled(element)
-            next_page = element
+        # TODO: Theres a bug in the is_crawled method, its returning false when it should return true.
+        index = 0
+        next_page = self.queue[index]
+        while True:
+            self.queue.pop(index)
+            if is_crawled(next_page):
+                index = index + 1
+                next_page = self.queue[index]
+            else:
+                break
+        write_to_crawled(next_page)
         yield response.follow(next_page, callback=self.parse)

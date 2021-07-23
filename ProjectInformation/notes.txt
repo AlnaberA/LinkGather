@@ -5,6 +5,8 @@ echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄  scrapy shell www
 
 echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄 $ scrapy crawl googleSpider
 
+echo@Echo-MBP:~/PycharmProjects/LinkGathering/link_gather\🎄 $ scrapy genspider usajmr_spider usajmr.com
+
 ------------------------------------------------------------------------------------------
 https://blog.softhints.com/run-debug-scrapy-projects-pycharm/
 Old Script Path: /Users/echo/PycharmProjects/LinkGathering/link_gather/link_gather/spiders/google_spider.py
