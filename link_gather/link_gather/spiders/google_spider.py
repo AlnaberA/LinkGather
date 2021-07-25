@@ -34,8 +34,9 @@ class GoogleSpider(scrapy.Spider):
     name = "googleSpider"
 
     start_urls = [
-        'http://www.usajmr.com'
+        'http://www.google.com'
     ]
+    handle_httpstatus_list = [403, 404]
 
     queue = []
 
@@ -45,17 +46,11 @@ class GoogleSpider(scrapy.Spider):
         links = response.css("a::attr(href)").getall()
         for link in links:
             if validators.url(link):
-                self.queue.append(link)
+                if link not in self.queue:
+                    self.queue.append(link)
 
-        # TODO: Theres a bug in the is_crawled method, its returning false when it should return true.
-        index = 0
-        next_page = self.queue[index]
-        while True:
-            self.queue.pop(index)
-            if is_crawled(next_page):
-                index = index + 1
-                next_page = self.queue[index]
-            else:
-                break
-        write_to_crawled(next_page)
+        next_page = self.queue[0]
+        self.queue.pop(0)
+        if not is_crawled(next_page):
+            write_to_crawled(next_page)
         yield response.follow(next_page, callback=self.parse)
