@@ -36,7 +36,7 @@ class GoogleSpider(scrapy.Spider):
     start_urls = [
         'http://www.google.com'
     ]
-    handle_httpstatus_list = [403, 404]
+    handle_httpstatus_list = [403, 404, 502]
 
     queue = []
 
@@ -46,7 +46,7 @@ class GoogleSpider(scrapy.Spider):
         links = response.css("a::attr(href)").getall()
         for link in links:
             if validators.url(link):
-                if link not in self.queue:
+                if (link not in self.queue) and ('google.com' in link):
                     self.queue.append(link)
 
         next_page = self.queue[0]
