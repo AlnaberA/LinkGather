@@ -10,12 +10,13 @@ def write_to_crawled(data):
 
 
 def is_crawled(data):
-    with open('crawled.txt') as f:
-        datafile = f.readlines()
-    for line in datafile:
-        if data in line:
-            return True
-    return False
+    try:
+        with open('crawled.txt') as f:
+            return data in f.read()
+    except FileNotFoundError:
+        with open('crawled.txt', 'w'):
+            pass
+        return False
 
 
 def write_array_to_file(data):
