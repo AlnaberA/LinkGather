@@ -1,34 +1,34 @@
+import os
 import scrapy
 import validators
 
+CRAWLED_FILE = "crawled.txt"
+OUTPUT_FILE = "output.txt"
+
 
 def write_to_crawled(data):
-    with open("crawled.txt", "a+") as txt_file:
-        # Move read cursor to the start of file.
-        txt_file.seek(0)
+    with open(CRAWLED_FILE, "a") as txt_file:
         txt_file.write(data + '\n')
 
 
 def is_crawled(data):
-    try:
-        with open('crawled.txt') as f:
-            return data in f.read()
-    except FileNotFoundError:
-        with open('crawled.txt', 'w'):
-            pass
+    if not os.path.exists(CRAWLED_FILE):
+        open(CRAWLED_FILE, 'a').close()
         return False
+    with open(CRAWLED_FILE) as f:
+        return data in f.read()
 
 
 def write_array_to_file(data):
-    with open("output.txt", "w") as txt_file:
+    with open(OUTPUT_FILE, "w") as txt_file:
         for line in data:
             txt_file.write(line)
 
 
 def convert_file_to_array():
-    file = open("output.txt", "r")
-    clean_string = file.read().strip('[').strip(']')
-    return clean_string.split(',')
+    with open(OUTPUT_FILE, "r") as file:
+        clean_string = file.read().strip('[').strip(']')
+        return clean_string.split(',')
 
 
 class GoogleSpider(scrapy.Spider):
@@ -39,19 +39,18 @@ class GoogleSpider(scrapy.Spider):
     ]
     handle_httpstatus_list = [403, 404, 502]
 
-    queue = []
-
-    crawled = []
+    queue = set()
+    crawled = set()
 
     def parse(self, response, **kwargs):
         links = response.css("a::attr(href)").getall()
         for link in links:
             if validators.url(link):
-                if (link not in self.queue) and ('google.com' in link):
-                    self.queue.append(link)
+                if link not in self.queue and 'google.com' in link:
+                    self.queue.add(link)
 
-        next_page = self.queue[0]
-        self.queue.pop(0)
-        if not is_crawled(next_page):
-            write_to_crawled(next_page)
-        yield response.follow(next_page, callback=self.parse)
+        if self.queue:
+            next_page = self.queue.pop()
+            if not is_crawled(next_page):
+                write_to_crawled(next_page)
+            yield response.follow(next_page, callback=self.parse)

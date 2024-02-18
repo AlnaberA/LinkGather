@@ -7,3 +7,12 @@ https://drive.google.com/?tab=wo
 https://www.google.com/intl/en/about/products?tab=wh
 http://www.google.com/history/optout?hl=en
 https://www.google.com/imghp?hl=en&tab=wi
+https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://news.google.com/home?tab%3Dwn%26hl%3Den-US%26gl%3DUS%26ceid%3DUS:en&followup=https://news.google.com/home?tab%3Dwn%26hl%3Den-US%26gl%3DUS%26ceid%3DUS:en&hl=en-US&ec=GAZAqgM
+https://www.google.com/intl/en/about/products?tab=nh
+https://www.google.com/chromebook/
+https://support.google.com/accounts?p=signin_privatebrowsing&hl=en-US
+https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://www.google.com/history/optout?hl%3Den&followup=https://www.google.com/history/optout?hl%3Den&hl=en&ec=GAZAjQI
+https://www.google.com/webhp?tab=iw
+https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/imghp%3Fhl%3Den%26tab%3Dwi&ec=GAZAAg
+https://maps.google.com/maps?hl=en&tab=wl
+https://pay.google.com/about/
